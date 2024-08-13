@@ -5,7 +5,7 @@ function Home({ route }) {
     const { username } = route.params
     return (
         <View>
-            <Text style={{ color: 'black' }}>Welcome {username}</Text>
+            <Text className="text-green-800">Welcome {username}</Text>
         </View>
     )
 }
