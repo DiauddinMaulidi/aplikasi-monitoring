@@ -16,7 +16,7 @@ const FirstPage = ({ navigation }) => {
                 <TouchableOpacity className="active:bg-orange-400 w-40 p-4 text-black rounded-xl">
                     <Text className="text-black text-center">register</Text>
                 </TouchableOpacity>
-                <TouchableOpacity onPress={() => navigation.navigate('Form', { name: 'TesComp' })} className="active:bg-orange-400 p-4 absolute right-0 w-40 text-black rounded-xl">
+                <TouchableOpacity onPress={() => navigation.navigate('Form')} className="active:bg-orange-400 p-4 absolute right-0 w-40 text-black rounded-xl">
                     <Text className="text-black text-center">login</Text>
                 </TouchableOpacity>
             </View>
