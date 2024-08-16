@@ -1,26 +1,30 @@
 import React from 'react'
-import { View, Text, Image, TouchableOpacity } from 'react-native';
-// import { NavigationContainer } from '@react-navigation/native';
+import { View, Text, Image, TouchableOpacity, ImageBackground } from 'react-native';
+import LinearGradient from 'react-native-linear-gradient';
 
 const FirstPage = ({ navigation }) => {
     return (
-        <View className="backdrop-opacity-95 backdrop-invert bg-white/10 h-full m-3">
-            <View>
-                <Image source={require('../public/iconDepan.jpg')} className="w-full h-[420px] rounded-3xl" />
+        <ImageBackground source={require('../public/bg.jpg')}>
+            <View className="backdrop-opacity-95 backdrop-invert bg-white/10 h-full">
+                <View className="m-3 flex justify-center items-center">
+                    <Image source={require('../public/iconDepan.jpg')} className="w-full h-[420px] rounded-3xl mb-5" />
+                    <Text className="text-white text-2xl py-3">Welcome to The World</Text>
+                    <Text className="text-white">the world is yours</Text>
+                </View>
+                <View>
+                    <LinearGradient start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} colors={['red', 'yellow', 'green']} className="mt-10 rounded-xl mx-5 p-[2px]">
+                        <View className="bg-blue-500 flex flex-row rounded-xl">
+                            <TouchableOpacity className="w-40 p-4 active:rounded-xl">
+                                <Text className="text-white text-center">Register</Text>
+                            </TouchableOpacity>
+                            <TouchableOpacity onPress={() => navigation.navigate('Login')} className="p-4 active:rounded-xl flex-1">
+                                <Text className="text-white text-center">Sign In</Text>
+                            </TouchableOpacity>
+                        </View>
+                    </LinearGradient>
+                </View>
             </View>
-            <View className="mt-7 flex justify-center items-center">
-                <Text className="text-black text-2xl py-3">Welcome to The World</Text>
-                <Text className="text-black">the world is yours</Text>
-            </View>
-            <View className="border-2 border-white flex flex-row mt-10 rounded-xl mx-2">
-                <TouchableOpacity className="active:bg-orange-400 w-40 p-4 text-black rounded-xl">
-                    <Text className="text-black text-center">register</Text>
-                </TouchableOpacity>
-                <TouchableOpacity onPress={() => navigation.navigate('Form')} className="active:bg-orange-400 p-4 absolute right-0 w-40 text-black rounded-xl">
-                    <Text className="text-black text-center">login</Text>
-                </TouchableOpacity>
-            </View>
-        </View>
+        </ImageBackground >
     )
 }
 

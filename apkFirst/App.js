@@ -1,7 +1,7 @@
 // import { View, Text } from 'react-native'
 import React from 'react'
-import TesComp from './src/TesComp'
-import Home from './src/Home'
+import Login from './src/Login';
+import Home from './src/screens/Home'
 import FirstPage from './src/FirstPage';
 
 import { NavigationContainer } from '@react-navigation/native';
@@ -14,8 +14,8 @@ const App = () => {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen name='FirsPage' component={FirstPage} options={{ headerShown: false }} />
-        <Stack.Screen name="Form" component={TesComp} options={{ headerShown: false }} />
-        <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name="Login" component={Login} options={{ headerShown: false }} />
+        <Stack.Screen name="Home" component={Home} options={{ headerShown: false }} />
       </Stack.Navigator>
     </NavigationContainer>
   );
